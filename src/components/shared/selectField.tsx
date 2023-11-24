@@ -78,7 +78,7 @@ const SelectField = ({
                 </span>
 
                 <ArrowDown
-                    className={`transition-transform duration-300 ease-in-out ${
+                    className={`transition-transform duration-300 ease-in-out ml-8 ${
                         open == type && open != '' ? 'rotate-180' : 'rotate-0'
                     } ${iconClass}`}
                 />
