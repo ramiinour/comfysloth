@@ -10,8 +10,6 @@ import { fetchAllProducts } from '@/data/products/query';
 import axios from 'axios';
 import ProductCard from './productCard';
 
-
-
 type Props = {
  
 }
@@ -121,9 +119,10 @@ const ProductsMain = ({
         }
     }
 
+    console.log(productsData)
     
     return (
-        <section className="section-spacing w-full flex flex-col items-center px-4">
+        <section className="section-spacing w-full flex flex-col items-center px-4 mt-16">
             <div className="flex flex-col items-center container">
                 <div className="w-full flex justify-between gap-5">
                     
@@ -335,6 +334,7 @@ const ProductsMain = ({
                                             return (
                                                 <ProductCard
                                                 key={item.name + index}
+                                                id={item.id}
                                                 name={item.name}
                                                 img={item.image}
                                                 price={item.price}

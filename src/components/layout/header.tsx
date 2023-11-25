@@ -86,13 +86,7 @@ const Header = (props: Props) => {
             </nav>
             
             <header
-                className={`fixed w-full flex flex-col left-0 top-0 z-50 transition-colors duration-300 ease-in-out ${
-                    isTransparent?.[pathname]
-                        ? isScrolled
-                            ? 'bg-black'
-                            : 'bg-none'
-                        : 'bg-black'
-                }`}
+                className={`w-full flex flex-col transition-colors duration-300 ease-in-out`}
             >
 
                 <div className="w-full flex flex-col items-center p-5 select-none">
@@ -106,21 +100,13 @@ const Header = (props: Props) => {
                                 (link: navLinkType, index: number) => {
                                     return (
                                         <li
-                                            className="text-sm"
+                                            className="text-md"
                                             key={link.text + index}
                                         >
                                     <Link
                                         scroll={false}
                                         href={link.link ?? '/'}
-                                        className={`${
-                                            isTransparent?.[
-                                                pathname
-                                            ]
-                                                ? isScrolled
-                                                    ? 'text-white'
-                                                    : 'text-white'
-                                                : 'text-white'
-                                        }`}
+                                        className={`text-content`}
                                     >
                                         {link.text}
                                     </Link>
@@ -137,7 +123,7 @@ const Header = (props: Props) => {
                                     Cart
                                 </span>
                                 <div>
-                                <FaCartShopping color="white" fontSize="1.5em" />
+                                <FaCartShopping  color="#ACD1E5" fontSize="1.5em" />
                                 </div>
                             </div>
                             <div className='hidden lg:flex '>
@@ -145,7 +131,7 @@ const Header = (props: Props) => {
                                     Login
                                 </span>
                                 <div>
-                                <FaUserPlus color="white" fontSize="1.5em" />
+                                <FaUserPlus color="#ACD1E5" fontSize="1.5em" />
                                 </div>
                             </div>
                             <div className={'block lg:hidden'}>

@@ -7,16 +7,17 @@ type Props = {
     img: string
     name: string
     price:string
+    id:string
 }
 
 
-const ProductCard = ({ img, name, price }: Props) => {
+const ProductCard = ({ img, name, price,id }: Props) => {
     return (
         <Link
-            href={`/`}
+            href={`/products/${id}`}
             className="flex flex-col gap-2 group rounded-md overflow-hidden"
         >
-            <div className="relative w-full h-[200px] overflow-hidden ">
+            <div className="relative w-full h-[200px] overflow-hidden">
                 <CustomImage
                     src={img}
                     fill

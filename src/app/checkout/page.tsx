@@ -1,4 +1,4 @@
-// import HeroSection from '@/components/shared/heroSection'
+import HeroSection from '@/components/shared/heroSection'
 // import ProductsMain from '@/components/products/productsMain'
 
 import React from 'react'
@@ -12,14 +12,14 @@ const Page = (props: Props) => {
             link: '/',
         },
         {
-            text: 'products',
-            link: '/products',
+            text: 'checkout',
+            link: '/checkout',
         },
     ]
     return (
         <>
-            {/* <HeroSection links={links} />
-            <ProductsMain/> */}
+            <HeroSection links={links} />
+            {/* <ProductsMain/>  */}
             <div>
                 HEYCHEKOUT
             </div>

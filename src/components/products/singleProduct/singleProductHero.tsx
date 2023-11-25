@@ -3,14 +3,16 @@ import Link from 'next/link'
 import React from 'react'
 import { LinkType} from '@/data/types'
 
-
+import { useParams } from 'next/navigation'
 type Props = {
     links?: LinkType[],
     title?: string
 }
 
 const HeroSection = ({ links,title}: Props) => {
-    
+    const params = useParams() 
+    const productId = params.id
+    console.log(productId)
     return (
         <section className="py-16  w-full flex flex-col items-center px-4 bg-[#eaded7]">
             <div className="container flex flex-col gap-5 items-center">
